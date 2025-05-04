@@ -1,2 +1,2 @@
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = lastModified;
+const lastMod = document.querySelector("#lastModified");
+lastMod.textContent = document.lastModified;
