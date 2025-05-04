@@ -1,55 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals homepage for Ricardo Sanjines, showing goals and personal information.">
-  <meta name="author" content="Ricardo Sanjines">
-  <title>WDD 131 – Dynamic Web Fundamentals – Ricardo Sanjines</title>
-
-  <!-- Google Fonts Preconnect -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WDD 131 - Ricardo Sanjjines</title>
+  <link rel="stylesheet" href="styles/base.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/base.css">
 </head>
+
 <body>
   <header>
-    <h1>WDD 131 – Dynamic Web Fundamentals – Ricardo Sanjines</h1>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Ricardo Sanjjines</span></h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
-      <a href="#">Blog</a>
-      <a href="#">Resources</a>
-      <a href="#">Contact</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Canvas</a>
+      <a href="#">Scripture</a>
+      <a href="#">Final Project</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>My Goals</h2>
-      <img src="images/goals.jpg" alt="Goals Image">
-      <p>I want to become a professional web developer.</p>
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="about">
+        <p>My name is Ricardo Sanjjines. I was born in La Paz, Bolivia. My family is from Bolivia. I work in a soil laboratory controlling osmosis machines. I am an electronic engineer fascinated with humanoid robotics. I wish to have the necessary knowledge to one day be able to go to a company where they invest in robotics research and finally work in what I am passionate about.</p>
+        <img src="images/profile.jpg" alt="Photo of Ricardo Sanjjines">
+      </div>
     </section>
 
-    <section>
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="My Profile Photo">
-      <p>I am a student learning HTML, CSS, and JavaScript at BYU-Idaho through the Pathway program.</p>
+    <section class="card">
+      <h2>My Goals and Dreams</h2>
+      <div class="location">
+        <img src="images/goals.jpg" alt="Personal goal image">
+        <p>Robotics has been my dream since I was a child. In my country, this type of technology is not supported. I hope to go to a country where this technology is supported and be able to use my knowledge to help change the world and improve it.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+        <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Last modified: <span id="lastModified"></span></p>
+    <p>&copy;2025 🌺 Ricardo Sanjjines 🌺 Bolivia</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
-  <!-- External JS with defer -->
-  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/getdates.js"></script>
 </body>
 </html>
