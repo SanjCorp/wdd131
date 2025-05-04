@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Ricardo Sanjines. Home page with HTML, CSS, JavaScript, links and layout.">
-  <meta name="author" content="Ricardo Sanjines">
-  <title>WDD 131 – Dynamic Web Fundamentals - Ricardo Sanjines</title>
-  <link rel="stylesheet" href="styles/base.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Homepage</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
-  <script src="scripts/getdates.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
 </head>
 <body>
   <header>
-    <h1>WDD 131 – Dynamic Web Fundamentals</h1>
+    <h1>Welcome to My Page</h1>
     <nav>
-      <a href="https://www.linkedin.com/">LinkedIn</a>
-      <a href="https://byupw.instructure.com/">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a>
-      <a href="#">Final Project</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Services</a>
+      <!-- Enlaces adicionales requeridos -->
+      <a href="#">Blog</a>
+      <a href="#">Resources</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Profile Photo">
-      <p>Hello! I'm Ricardo Sanjines, a web development student. I enjoy learning how to build websites using HTML, CSS, and JavaScript.</p>
+    <section>
+      <h2>My Goals</h2>
+      <img src="images/goals.jpg" alt="Goals Image" width="300" />
+      <p>I want to become a professional web developer.</p>
     </section>
 
-    <section class="card">
-      <h2>My Goals</h2>
-      <img src="images/goals.jpg" alt="Goals Image">
-      <p>My goal is to become a full-stack web developer and help others through meaningful web applications.</p>
+    <section>
+      <h2>About Me</h2>
+      <img src="images/profile.jpg" alt="My Profile Photo" width="300" />
+      <p>I am a student learning HTML, CSS, and JavaScript.</p>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="currentyear"></span> Ricardo Sanjines, Bolivia</p>
-    <p id="lastModified"></p>
+    <p>&copy; <span id="year"></span> | Last modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Last modified
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 </body>
 </html>
