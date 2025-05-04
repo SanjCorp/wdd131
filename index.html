@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals homepage for Ricardo Sanjines, showing goals and personal information.">
+  <meta name="author" content="Ricardo Sanjines">
+  <title>WDD 131 – Dynamic Web Fundamentals – Ricardo Sanjines</title>
 
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,17 +15,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to My Page</h1>
+    <h1>WDD 131 – Dynamic Web Fundamentals – Ricardo Sanjines</h1>
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Projects</a>
       <a href="#">Services</a>
-      <!-- Enlaces adicionales requeridos -->
       <a href="#">Blog</a>
       <a href="#">Resources</a>
       <a href="#">Contact</a>
@@ -33,14 +34,14 @@
   <main>
     <section>
       <h2>My Goals</h2>
-      <img src="images/goals.jpg" alt="Goals Image" width="300" />
+      <img src="images/goals.jpg" alt="Goals Image">
       <p>I want to become a professional web developer.</p>
     </section>
 
     <section>
       <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="My Profile Photo" width="300" />
-      <p>I am a student learning HTML, CSS, and JavaScript.</p>
+      <img src="images/profile.jpg" alt="My Profile Photo">
+      <p>I am a student learning HTML, CSS, and JavaScript at BYU-Idaho through the Pathway program.</p>
     </section>
   </main>
 
@@ -48,12 +49,7 @@
     <p>&copy; <span id="year"></span> | Last modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Last modified
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+  <!-- External JS with defer -->
+  <script src="scripts/getdates.js" defer></script>
 </body>
 </html>
