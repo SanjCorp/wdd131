@@ -1,21 +1,26 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap');
 
 :root {
-  --primary-color: #005f99;
-  --secondary-color: #f4f4f4;
-  --accent-color: #ff3366;
+  --primary-color: #1e3a8a;
+  --secondary-color: #facc15;
+  --text-color: #1f2937;
+  --background-color: #ffffff;
+  --font-family-main: 'Roboto', sans-serif;
+  --font-family-headings: 'Merriweather', serif;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--secondary-color);
-  color: #333;
+  font-family: var(--font-family-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 header {
@@ -28,57 +33,56 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  background-color: #333;
+  gap: 1rem;
   padding: 0.5rem;
+  background-color: #3b82f6;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--accent-color);
+  background-color: #1e40af;
+  border-radius: 5px;
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+section {
+  background-color: #f9fafb;
   padding: 1rem;
-}
-
-.card h2 {
-  margin-bottom: 1rem;
-}
-
-.about-content,
-.goals-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.about-content img,
-.goals-content img {
-  width: 150px;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-headings);
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 footer {
-  background-color: var(--primary-color);
+  background-color: #1e3a8a;
   color: white;
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
