@@ -1,4 +1,2 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
-});
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = lastModified;
