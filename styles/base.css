@@ -69,10 +69,16 @@ section {
 }
 
 section img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 1rem 0;
+}
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
