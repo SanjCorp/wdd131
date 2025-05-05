@@ -74,8 +74,15 @@ section img {
   border-radius: 8px;
   margin: 1rem 0;
 }
-img {
-  width: 25%;
+.profile-img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.goals-img {
+  width: 60%;
   height: auto;
   display: block;
   margin: 0 auto;
