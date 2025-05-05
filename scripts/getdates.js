@@ -1,5 +1,5 @@
-// Get current year
-document.getElementById("currentYear").textContent = new Date().getFullYear();
+// Insert current year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// Get the last modified date of the file
-document.getElementById("lastModified").textContent = document.lastModified;
+// Insert last modified date
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
