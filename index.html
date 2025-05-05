@@ -1,63 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals student homepage for Ricardo Sanjjines, featuring goals, resources, and personal background.">
-  <meta name="author" content="Ricardo Sanjjines">
-  <title>WDD 131: Dynamic Web Fundamentals – Ricardo Sanjjines</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/getdates.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>WDD 131 – Dynamic Web Fundamentals – Ricardo Sanjjines</h1>
-    <nav>
-      <a href="https://www.linkedin.com/in/ricardo-sanjines-67048233a">LinkedIn</a>
-      <a href="https://byupw.instructure.com/">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/21?lang=spa&id=p16#p16">Scripture</a>
-      <a href="#">Final Project</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131: Dynamic Web Fundamentals course by Ricardo Sanjjines. This is my personal homepage showcasing my projects and links to essential tools.">
+    <meta name="author" content="Ricardo Sanjjines">
+    <title>WDD 131: Dynamic Web Fundamentals – Ricardo Sanjjines</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
+  </head>
 
-  <main>
-    <section class="about-me">
-      <img src="images/profile.jpg" alt="Profile picture of Ricardo Sanjjines">
-      <p>
-        My name is Ricardo Sanjjines. I was born in La Paz, Bolivia. My family is from Bolivia.
-        I work in a soil laboratory controlling osmosis machines. I am an electronic engineer
-        fascinated with humanoid robotics. I wish to have the necessary knowledge to one day
-        be able to go to a company where they invest in robotics research and finally work
-        in what I am passionate about.
-      </p>
-    </section>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>WDD 131: Dynamic Web Fundamentals – Ricardo Sanjjines</h1>
+        <nav>
+          <a href="https://www.linkedin.com/in/ricardo-sanjines-67048233a">LinkedIn</a>
+          <a href="https://byupw.instructure.com/">Canvas</a>
+          <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/21?lang=spa&id=p16#p16">Scripture</a>
+          <a href="#">Final Project</a>
+        </nav>
+      </div>
+    </header>
 
-    <section class="goals">
-      <h2>My Dreams and Goals</h2>
-      <img src="images/goals.jpg" alt="Image representing robotics goals">
-      <p>
-        Robotics has been my dream since I was a child. In my country, this type of technology is not supported.
-        I hope to go to a country where this technology is supported and be able to use my knowledge to help
-        change the world and improve it.
-      </p>
-    </section>
+    <main>
+      <section>
+        <h2>Welcome to My Page</h2>
+        <p>This is my personal homepage for the WDD 131: Dynamic Web Fundamentals course. Here you will find links to my essential tools and personal projects.</p>
+        <img src="images/profile.jpg" alt="A photo of Ricardo Sanjjines">
+        <img src="images/goals.jpg" alt="My personal goals for this course">
+      </section>
 
-    <section class="resources">
-      <h2>Web Development Resources</h2>
-      <ul>
-        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-        <li><a href="https://web.dev/">Web.dev</a></li>
-      </ul>
-    </section>
-  </main>
+      <footer>
+        <p>&copy; <span id="currentYear"></span> | Last updated: <span id="lastModified"></span></p>
+      </footer>
+    </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Ricardo Sanjjines | Bolivia</p>
-    <p id="lastModified"></p>
-  </footer>
-</body>
+    <script src="scripts/getdates.js"></script>
+  </body>
 </html>
