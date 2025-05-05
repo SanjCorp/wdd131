@@ -1,4 +1,14 @@
-/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap');
+
+:root {
+  --primary-color: #1e3a8a;
+  --secondary-color: #f4f4f4;
+  --text-color: #1f2937;
+  --background-color: #ffffff;
+  --font-main: 'Roboto', sans-serif;
+  --font-head: 'Merriweather', serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +16,15 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 header {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: var(--primary-color);
+  color: white;
   padding: 1rem;
 }
 
@@ -32,66 +41,76 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-
-  .header-top h1 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  nav {
-    gap: 1.5rem;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #ecf0f1;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    color: #3498db;
-  }
 }
 
-main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+nav {
+  display: flex;
+  gap: 1rem;
 }
 
-section {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-  background-color: #34495e;
-  color: #ecf0f1;
-  text-align: center;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer span {
+nav a {
+  color: white;
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* Max-width issue fix */
-main {
-  max-width: 100%;
+nav a:hover {
+  text-decoration: underline;
 }
 
-img {
-  width: 100%;
-  max-width: 125px;
-  height: auto;
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-family: var(--font-head);
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.about-content,
+.goals-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-content img,
+.goals-content img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li + li {
+  margin-top: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
