@@ -1,31 +1,15 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap');
-
-:root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #facc15;
-  --text-color: #1f2937;
-  --background-color: #ffffff;
-  --font-family-main: 'Roboto', sans-serif;
-  --font-family-headings: 'Merriweather', serif;
-}
-
-* {
+body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-family-main);
-  background-color: var(--background-color);
-  color: var(--text-color);
   line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #003366;
+  color: #fff;
   padding: 1rem;
   text-align: center;
 }
@@ -34,55 +18,44 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 0.5rem;
-  background-color: #3b82f6;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #1e40af;
-  border-radius: 5px;
+  text-decoration: underline;
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  max-width: 960px;
+  margin: 2rem auto;
   padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-section {
-  background-color: #f9fafb;
-  padding: 1rem;
-  border: 1px solid #d1d5db;
+  background-color: #fff;
   border-radius: 8px;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-family-headings);
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
+section {
+  margin-bottom: 2rem;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 10px;
 }
 
 footer {
-  background-color: #1e3a8a;
-  color: white;
   text-align: center;
   padding: 1rem;
+  background-color: #003366;
+  color: #fff;
   margin-top: 2rem;
 }
