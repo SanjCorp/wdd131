@@ -1,10 +1,13 @@
 @media (min-width: 768px) {
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
+  main {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    font-size: 1.1rem;
   }
 }
