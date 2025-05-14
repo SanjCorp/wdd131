@@ -1,11 +1,13 @@
-// Footer dinámico
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// scripts/temples.js
 
-// Menú hamburguesa
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+// Muestra la fecha de la última modificación del documento en el footer
+const lastModifiedElement = document.getElementById("lastModified");
 
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
+if (lastModifiedElement) {
+  const lastModified = new Date(document.lastModified);
+  const formattedDate = lastModified.toLocaleString("en-US", {
+    dateStyle: "full",
+    timeStyle: "short"
+  });
+  lastModifiedElement.textContent = `Last Modified: ${formattedDate}`;
+}
