@@ -1,8 +1,13 @@
 // scripts/temples.js
 
-// Muestra la fecha de la última modificación del documento en el footer
-const lastModifiedElement = document.getElementById("lastModified");
+// Mostrar el año actual
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
 
+// Mostrar la última fecha de modificación
+const lastModifiedElement = document.getElementById("lastModified");
 if (lastModifiedElement) {
   const lastModified = new Date(document.lastModified);
   const formattedDate = lastModified.toLocaleString("en-US", {
