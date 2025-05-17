@@ -1,74 +1,91 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Photo album of temples around the world built by The Church of Jesus Christ of Latter-day Saints.">
-  <meta name="author" content="Ricardo Sanjines">
-  <title>Temple Album</title>
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
-  <script src="scripts/temples.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Your Name" />
+  <meta name="description" content="Temple photo album" />
+  <title>Temples Album</title>
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 600px)" />
 </head>
 <body>
   <header>
-    <h1>Temple Album: Temples Around the World</h1>
+    <h1>Temple Photo Album</h1>
+    <button id="menu">☰</button>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="temples.html">Temples</a>
-      <a href="#">History</a>
-      <a href="#">Locations</a>
-      <a href="#">Contact</a>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Temples</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Gallery of Temples</h2>
-    <figure>
-      <img src="images/temple1.jpeg" alt="Salt Lake Temple">
-      <figcaption>Salt Lake Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple2.jpeg" alt="Laie Hawaii Temple">
-      <figcaption>Laie Hawaii Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple3.jpeg" alt="Rome Italy Temple">
-      <figcaption>Rome Italy Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple4.jpeg" alt="Cardston Alberta Temple">
-      <figcaption>Cardston Alberta Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple5.jpeg" alt="Bern Switzerland Temple">
-      <figcaption>Bern Switzerland Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple6.jpeg" alt="Mexico City Temple">
-      <figcaption>Mexico City Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple7.jpeg" alt="Paris France Temple">
-      <figcaption>Paris France Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple8.jpeg" alt="Accra Ghana Temple">
-      <figcaption>Accra Ghana Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple9.jpeg" alt="Kyiv Ukraine Temple">
-      <figcaption>Kyiv Ukraine Temple</figcaption>
-    </figure>
-    <figure>
-      <img src="images/temple10.jpeg" alt="Tokyo Japan Temple">
-      <figcaption>Tokyo Japan Temple</figcaption>
-    </figure>
+    <h2>Temples Around the World</h2>
+    <div class="temple-grid">
+      <figure>
+        <img src="images/temple1.jpeg" alt="Temple 1" loading="lazy" />
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple2.jpeg" alt="Temple 2" loading="lazy" />
+        <figcaption>Temple 2</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple3.jpeg" alt="Temple 3" loading="lazy" />
+        <figcaption>Temple 3</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple4.jpeg" alt="Temple 4" loading="lazy" />
+        <figcaption>Temple 4</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple5.jpeg" alt="Temple 5" loading="lazy" />
+        <figcaption>Temple 5</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple6.jpeg" alt="Temple 6" loading="lazy" />
+        <figcaption>Temple 6</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple7.jpeg" alt="Temple 7" loading="lazy" />
+        <figcaption>Temple 7</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple8.jpeg" alt="Temple 8" loading="lazy" />
+        <figcaption>Temple 8</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple9.jpeg" alt="Temple 9" loading="lazy" />
+        <figcaption>Temple 9</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple10.jpeg" alt="Temple 10" loading="lazy" />
+        <figcaption>Temple 10</figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Ricardo Sanjjines | La Paz, Bolivia</p>
+    <p>&copy; <span id="year"></span> | Your Name</p>
     <p id="lastModified"></p>
   </footer>
+
+  <script src="scripts/temples.js"></script>
+  <script>
+    // Menú hamburguesa
+    const menuButton = document.getElementById('menu');
+    const navigation = document.querySelector('.navigation');
+
+    menuButton.addEventListener('click', () => {
+      navigation.classList.toggle('open');
+      menuButton.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
+
