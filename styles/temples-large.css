@@ -1,25 +1,17 @@
-@media (min-width: 768px) {
-  nav {
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex !important;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
   }
 
   #menu {
     display: none;
   }
 
-  .navigation {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .navigation li {
-    width: auto;
-  }
-
   .temple-grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: auto;
   }
 }
