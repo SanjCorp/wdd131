@@ -1,13 +1,28 @@
-@media (min-width: 768px) {
-  main {
+@media (min-width: 600px) {
+  header {
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    background-color: #003366;
+  }
+
+  .navigation li {
+    margin-left: 1rem;
+  }
+
+  .temple-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  nav {
-    font-size: 1.1rem;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
   }
 }
