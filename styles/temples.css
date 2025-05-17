@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #003366;
+  background-color: #004d40;
   color: white;
   padding: 1rem;
   text-align: center;
-  position: relative;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #00695c;
 }
 
 #menu {
@@ -26,70 +28,64 @@ header {
   border: none;
   color: white;
   font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  padding: 1rem;
   cursor: pointer;
+  display: block;
 }
 
 .navigation {
   display: none;
-  flex-direction: column;
   list-style: none;
-  background-color: #003366;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navigation.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li {
+  width: 100%;
 }
 
 .navigation a {
+  display: block;
+  padding: 1rem;
   color: white;
   text-decoration: none;
-  padding: 1rem;
-  display: block;
-  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .navigation a:hover {
-  background-color: #005599;
-}
-
-.navigation.open {
-  display: flex;
+  background-color: #004d40;
 }
 
 main {
   padding: 1rem;
-  text-align: center;
 }
 
 .temple-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 figure {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 0;
+  text-align: center;
 }
 
 img {
   width: 100%;
   height: auto;
-  display: block;
-}
-
-figcaption {
-  padding: 0.5rem;
-  font-weight: bold;
-  background-color: #eee;
+  max-width: 100%;
 }
 
 footer {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #003366;
+  background-color: #004d40;
   color: white;
   text-align: center;
+  padding: 1rem;
 }
+
