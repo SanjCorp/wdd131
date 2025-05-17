@@ -1,7 +1,8 @@
-@media (min-width: 600px) {
-  header {
-    text-align: left;
-    padding-left: 2rem;
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #menu {
@@ -12,17 +13,13 @@
     display: flex !important;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 2rem;
-    background-color: #003366;
   }
 
   .navigation li {
-    margin-left: 1rem;
+    width: auto;
   }
 
   .temple-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 1rem 2rem;
   }
 }
