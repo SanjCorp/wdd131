@@ -1,123 +1,101 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --main-bg: #f0f0f0;
+  --main-color: #00695c;
+  --text-color: #333;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f0f0f0;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
 header {
-  background-color: #00695c;
-  padding: 1rem;
+  background-color: var(--main-color);
   color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: white;
+  margin: 0.5rem auto;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-nav button {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
+  background-color: #004d40;
+  padding: 0.5rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hidden {
+nav ul.hidden {
   display: none;
 }
 
-.show {
-  display: flex !important;
-  flex-direction: column;
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
-/* Responsive nav menu */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
-    background-color: #004d40;
-    border-radius: 5px;
-  }
-
-  nav ul li a {
-    padding: 1rem;
-    border-bottom: 1px solid #00332e;
-  }
+button#menuBtn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-/* Main */
-main {
-  padding: 1rem;
-  max-width: 960px;
-  margin: auto;
-}
-
-h1, h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Hero Section */
-.hero picture, .hero img {
+.hero img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
+  display: block;
+  max-width: 100%;
 }
 
-/* Weather Section */
-.weather-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
+.card {
+  background: white;
+  margin: 1rem auto;
   padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.weather-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1rem;
-}
-
-.weather-info p {
-  margin: 0.5rem 0;
-}
-
-/* Footer */
 footer {
-  background-color: #00695c;
+  background-color: #00332e;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
 }
