@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Bolivia, its culture, and weather." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <title>Bolivia - Place Page</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menuBtn" aria-label="Toggle navigation">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="temples.html">Temples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Bolivia</h1>
+
+    <section class="hero">
+      <picture>
+        <source srcset="images/bolivia-hero-large.webp" media="(min-width: 768px)" type="image/webp" />
+        <source srcset="images/bolivia-hero-small.webp" media="(max-width: 767px)" type="image/webp" />
+        <img src="images/bolivia-hero-small.webp" alt="Bolivia landscape" />
+      </picture>
+    </section>
+
+    <section class="weather">
+      <h2>Weather <span class="emoji">⛅</span></h2>
+      <div class="weather-info">
+        <img class="weather-icon" src="images/cloud.svg" alt="Cloudy Weather" />
+        <p>Temperature: <span id="temp">10</span> °C</p>
+        <p>Wind Speed: <span id="speed">5</span> km/h</p>
+        <p>Wind Chill: <span id="windchill"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Bolivia - Ricardo Sanjines</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
