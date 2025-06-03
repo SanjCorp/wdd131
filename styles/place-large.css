@@ -1,8 +1,11 @@
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   main {
-    grid-template-columns: 1fr 1fr;
+     display: grid;Add commentMore actions
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
   }
-
+  .mobile-icon {
+    display: none !important;
   .weather-icon {
     display: inline;
   }
