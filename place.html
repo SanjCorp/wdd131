@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Descubre la belleza de Bolivia: su cultura vibrante, paisajes naturales y clima variado." />
-  <meta name="author" content="Ricardo Sanjinés" />
-  <title>Bolivia - Cultura y Clima</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/place.css">
+  <title>Your Country Page</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
 </head>
 <body>
   <header>
+    <h1>Place Name</h1>
     <nav>
-      <button id="menuBtn" aria-label="Toggle navigation">☰</button>
-      <ul id="menu" class="hidden">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="temples.html">Temples</a></li>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Weather</a></li>
       </ul>
     </nav>
-    <h1>Explora Bolivia: Cultura, Naturaleza y Clima</h1>
   </header>
 
   <main>
     <section class="hero">
       <picture>
-        <source srcset="images/bolivia-hero-small.webp" media="(max-width: 600px)">
-        <img src="images/bolivia-hero-large.webp" alt="Paisaje de Bolivia" loading="lazy">
+        <source srcset="images/hero-large.webp" media="(min-width: 600px)" />
+        <img src="images/hero-small.webp" alt="Place Image" />
       </picture>
     </section>
 
-    <section class="card">
-      <h2>Cultura</h2>
-      <p>Bolivia cuenta con una diversidad cultural rica que se manifiesta en sus festivales, gastronomía y costumbres tradicionales.</p>
+    <section class="data">
+      <h2>Data</h2>
+      <ul>
+        <li>Population: 10M</li>
+        <li>Area: 100,000 km²</li>
+        <li>Currency: XYZ</li>
+      </ul>
     </section>
 
-    <section class="card">
-      <h2>Clima</h2>
-      <p>El clima en Bolivia varía según la región, desde zonas tropicales hasta áreas montañosas con climas fríos.</p>
+    <section class="weather">
+      <h2>Weather <span class="weather-icon"></span></h2>
+      <p>Temperature: <span id="temperature">8</span> °C</p>
+      <p>Wind Speed: <span id="windspeed">6</span> km/h</p>
+      <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+      <img src="images/weather.svg" alt="Weather Icon" class="mobile-icon" />
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Ricardo Sanjinés | Bolivia</p>
+    <p>&copy; <span id="currentyear"></span> | Last Updated: <span id="lastmodified"></span></p>
   </footer>
-
-  <script src="scripts/place.js" defer></script>
 </body>
 </html>
-
