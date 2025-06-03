@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Country Page</title>
+  <meta name="description" content="Learn about the beautiful country of Bolivia, its places, climate and attractions." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <title>Bolivia | Country Page</title>
   <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 640px)" />
   <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
   <header>
-    <h1>Place Name</h1>
+    <h1>Bolivia</h1>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Weather</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="temples.html">Temples</a>
+      <a href="place.html" class="active">Bolivia</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <picture>
-        <source srcset="images/hero-large.webp" media="(min-width: 600px)" />
-        <img src="images/hero-small.webp" alt="Place Image" />
-      </picture>
-    </section>
+    <picture>
+      <source srcset="images/bolivia-hero-large.webp" media="(min-width: 1000px)">
+      <source srcset="images/bolivia-hero-medium.webp" media="(min-width: 640px)">
+      <img src="images/bolivia-hero-small.webp" alt="Bolivia landscape">
+    </picture>
 
     <section class="data">
       <h2>Data</h2>
       <ul>
-        <li>Population: 10M</li>
-        <li>Area: 100,000 km²</li>
-        <li>Currency: XYZ</li>
+        <li><strong>Area:</strong> 1,098,581 km²</li>
+        <li><strong>Population:</strong> 12 million</li>
+        <li><strong>Capital:</strong> Sucre (official), La Paz (government)</li>
+        <li><strong>Language:</strong> Spanish, Quechua, Aymara, and others</li>
+        <li><strong>Currency:</strong> Boliviano (BOB)</li>
+        <li><strong>Time Zone:</strong> GMT-4</li>
+        <li><strong>Calling Code:</strong> +591</li>
+        <li><strong>Internet TLD:</strong> .bo</li>
       </ul>
     </section>
 
     <section class="weather">
-      <h2>Weather <span class="weather-icon"></span></h2>
-      <p>Temperature: <span id="temperature">8</span> °C</p>
-      <p>Wind Speed: <span id="windspeed">6</span> km/h</p>
-      <p>Wind Chill: <span id="windchill">Calculating...</span></p>
-      <img src="images/weather.svg" alt="Weather Icon" class="mobile-icon" />
+      <h2>Weather <span class="icon">⛅</span></h2>
+      <ul>
+        <li><strong>Temperature:</strong> <span id="temperature">10</span>°C</li>
+        <li><strong>Wind Speed:</strong> <span id="wind-speed">15</span> km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="wind-chill"></span></li>
+      </ul>
+      <img class="weather-icon" src="images/weather-icon.svg" alt="Partly cloudy icon">
+    </section>
+
+    <section class="description">
+      <h2>About Bolivia</h2>
+      <p>
+        Bolivia is a landlocked country in central South America, known for its diverse culture, geography, and traditions. From the Andes mountains to the Amazon rainforest, Bolivia offers incredible natural and cultural wonders.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> | Last Updated: <span id="lastmodified"></span></p>
+    <p>&copy; <span id="year"></span> | Ricardo Sanjines | Bolivia</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
   </footer>
 </body>
+
 </html>
