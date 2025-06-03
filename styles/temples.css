@@ -1,52 +1,32 @@
-/* Base reset y tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #3a0061;
+  background-color: #004a99;
   color: white;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 nav ul {
-  display: none;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0;
-  flex-direction: column;
-  background-color: #3a0061;
-}
-
-nav ul.show {
-  display: flex;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
-nav a:hover {
-  background-color: #5e158b;
-}
-
-#menu {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Layout para imágenes */
-.temple-grid {
+.gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -54,22 +34,15 @@ nav a:hover {
 }
 
 figure {
-  margin: 0;
   text-align: center;
 }
 
 img {
   width: 100%;
-  max-width: 300px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  max-width: 400px;
 }
-
-footer {
-  background-color: #3a0061;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+.hidden {
+  display: none;
 }
 
