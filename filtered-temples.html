@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Temple Photo Album</title>
-  <meta name="description" content="A photo album of temples around the world as part of the WDD131 web development course." />
-  <meta name="author" content="Ricardo Sanjines" />
-  <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-large.css" />
-  <script src="scripts/temples.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descripción breve de tu sitio.">
+  <title>Mi página de prueba</title>
 </head>
-
-
 <body>
   <header>
-    <h1>Temples Around the World</h1>
+    <h1>Bienvenido a mi sitio</h1>
     <nav>
-      <a href="#" class="active" data-filter="all">All</a>
-      <a href="#" data-filter="small">Small</a>
-      <a href="#" data-filter="medium">Medium</a>
-      <a href="#" data-filter="large">Large</a>
-      <a href="#" data-filter="recent">Recent</a>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </header>
-
   <main>
-    <section id="temples" class="temples-grid">
-      <!-- Aquí se inyectan los templos desde JS -->
+    <section>
+      <h2>Servicios</h2>
+      <p>Ofrecemos soluciones en diseño web.</p>
+      <img src="logo.png" alt="Logo de la empresa">
     </section>
+    <form>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo">
+    </form>
   </main>
-
   <footer>
-    &copy; 2025 Ricardo Sanjines. All rights reserved.
+    <p>&copy; 2025 Sanj Corporation</p>
   </footer>
-
-  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
