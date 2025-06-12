@@ -1,5 +1,3 @@
-// scripts/filtered-temples.js
-
 const temples = [
   {
     name: "Salt Lake Temple",
@@ -73,7 +71,6 @@ const temples = [
   }
 ];
 
-// Función para mostrar templos en el contenedor con id "temples"
 const displayTemples = (filteredTemples) => {
   const container = document.getElementById("temples");
   container.innerHTML = "";
@@ -100,8 +97,49 @@ const displayTemples = (filteredTemples) => {
   });
 };
 
-// Función para filtrar templos según filtro recibido
 const filterTemples = (filter) => {
+  let filtered = [];
   switch (filter) {
-    case "old":
-      displayTemples(t
+    case "small":
+      filtered = temples.filter(t => t.area < 30000);
+      break;
+    case "medium":
+      filtered = temples.filter(t => t.area >= 30000 && t.area <= 100000);
+      break;
+    case "large":
+      filtered = temples.filter(t => t.area > 100000);
+      break;
+    case "recent":
+      filtered = temples.filter(t => {
+        const year = new Date(t.dedicated).getFullYear();
+        return year >= 2010;
+      });
+      break;
+    case "all":
+    default:
+      filtered = temples;
+      break;
+  }
+  displayTemples(filtered);
+};
+
+// Setup filtros en nav
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    // Quitar active de todos
+    navLinks.forEach(l => l.classList.remove("active"));
+    // Poner active al clickeado
+    link.classList.add("active");
+
+    // Filtrar
+    const filter = link.dataset.filter;
+    filterTemples(filter);
+  });
+});
+
+// Mostrar todos inicialmente
+window.addEventListener("DOMContentLoaded", () => {
+  filterTemples("all");
+});
