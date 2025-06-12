@@ -1,3 +1,4 @@
+/* Reset básico y cuerpo */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background-color: #004080;
   color: white;
@@ -18,7 +20,7 @@ header h1 {
   font-weight: 700;
 }
 
-/* Nav con CSS Grid en lugar de Flex */
+/* Nav con CSS Grid */
 nav {
   display: grid;
   grid-auto-flow: column;
@@ -27,6 +29,7 @@ nav {
   padding: 0.5rem 0;
 }
 
+/* Estilo base para enlaces */
 nav a {
   color: white;
   text-decoration: none;
@@ -40,18 +43,21 @@ nav a {
   /* Sin :hover */
 }
 
+/* Enlace activo (seleccionado) */
 nav a.active {
   background-color: #0066cc;
   color: #fff;
   font-weight: 700;
 }
 
+/* Main contenido */
 main {
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Grilla de templos con CSS Grid */
 .temples-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -78,6 +84,7 @@ figcaption {
   color: #444;
 }
 
+/* Footer */
 footer {
   background-color: #004080;
   color: white;
@@ -85,4 +92,17 @@ footer {
   padding: 0.75rem 1rem;
   font-size: 0.85rem;
   margin-top: 2rem;
+}
+
+/* Media Queries para mayor pantalla */
+@media (min-width: 768px) {
+  .temples-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .temples-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
