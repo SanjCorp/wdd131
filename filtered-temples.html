@@ -1,66 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self'; style-src 'self';">
-  <meta name="description" content="Photo album of temples built around the world by the Church of Jesus Christ of Latter-day Saints.">
-  <meta name="author" content="Ricardo Sanjines">
-  <title>Filtered Temple Album</title>
-  <link rel="stylesheet" href="styles/filtered-temples.css">
-  <link rel="stylesheet" href="styles/filtered-temples-large.css">
-  <script src="scripts/filtered-temples.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A filtered photo album showcasing LDS temples around the world by dedication year and size." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <title>Filtered Temple Album | Temples Around the World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" />
 </head>
 <body>
   <header>
+    <h1>Temples Around the World</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="temples.html">Temples</a>
-      <a href="filtered-temples.html">Filtered Temples</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a> <!-- 5to enlace -->
+      <a href="#" class="active" data-filter="all">All</a>
+      <a href="#" data-filter="small">Small</a>
+      <a href="#" data-filter="medium">Medium</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="recent">Recent</a>
     </nav>
   </header>
 
   <main>
-    <h1>Filtered Temple Album</h1>
-
-    <div class="filters">
-      <button id="all">All</button>
-      <button id="old">Before 1900</button>
-      <button id="modern">After 2000</button>
-    </div>
-
-    <div class="temple-cards" id="templeContainer">
-      <!-- Las tarjetas de templos se llenan con JavaScript -->
-      
-    </div>
-    <section class="temples-grid">
-      <figure data-size="small" data-year="1995">
-        <img src="images/temple1.jpg" alt="Temple 1" />
-        <figcaption>Temple 1 - Small - 1995</figcaption>
-      </figure>
-      <figure data-size="medium" data-year="2005">
-        <img src="images/temple2.jpg" alt="Temple 2" />
-        <figcaption>Temple 2 - Medium - 2005</figcaption>
-      </figure>
-      <figure data-size="large" data-year="2015">
-        <img src="images/temple3.jpg" alt="Temple 3" />
-        <figcaption>Temple 3 - Large - 2015</figcaption>
-      </figure>
-      <figure data-size="small" data-year="2018">
-        <img src="images/temple4.jpg" alt="Temple 4" />
-        <figcaption>Temple 4 - Small - 2018</figcaption>
-      </figure>
-      <figure data-size="medium" data-year="2020">
-        <img src="images/temple5.jpg" alt="Temple 5" />
-        <figcaption>Temple 5 - Medium - 2020</figcaption>
-      </figure>
+    <section id="temples" class="temples-grid">
+      <!-- Aquí se inyectan los templos desde JS -->
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Ricardo Sanjines | Bolivia</p>
+    &copy; 2025 Ricardo Sanjines. All rights reserved.
   </footer>
+
+  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
