@@ -1,74 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temple Album</title>
-  <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)" />
-  <script src="scripts/temples.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A filtered photo album of temples around the world by dedication year and size.">
+  <meta name="author" content="Ricardo Sanjines">
+  <title>Filtered Temple Album</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Temple Photo Album</h1>
+    <h1>Temples Around the World</h1>
     <nav>
-      <button id="menuBtn">☰</button>
-      <ul id="menu" class="hidden">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="place.html">Place</a></li>
-      </ul>
+      <a href="#" id="all">All</a>
+      <a href="#" id="old">Old</a>
+      <a href="#" id="new">New</a>
+      <a href="#" id="large">Large</a>
+      <a href="#" id="small">Small</a>
     </nav>
   </header>
 
   <main>
-    <h1>Temples Around the World</h1>
-    <section class="gallery">
-      <figure>
-        <img src="images/temple1.jpeg" alt="Salt Lake Temple">
-        <figcaption>Salt Lake Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple2.jpeg" alt="Rome Italy Temple">
-        <figcaption>Rome Italy Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple3.jpeg" alt="Paris France Temple">
-        <figcaption>Paris France Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple4.jpeg" alt="Mexico City Temple">
-        <figcaption>Mexico City Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple5.jpeg" alt="Provo City Center Temple">
-        <figcaption>Provo City Center Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple6.jpeg" alt="Tokyo Japan Temple">
-        <figcaption>Tokyo Japan Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple7.jpeg" alt="Bern Switzerland Temple">
-        <figcaption>Bern Switzerland Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple8.jpeg" alt="Accra Ghana Temple">
-        <figcaption>Accra Ghana Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple9.jpeg" alt="Fortaleza Brazil Temple">
-        <figcaption>Fortaleza Brazil Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple10.jpeg" alt="Cebu City Philippines Temple">
-        <figcaption>Cebu City Philippines Temple</figcaption>
-      </figure>
-    </section>
+    <div id="temples" class="temples-grid"></div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Ricardo Sanjines</p>
+    <p>&copy; <span id="year"></span> | Ricardo Sanjines | WDD131 - BYU Idaho</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="scripts/filtered-temples.js"></script>
 </body>
 </html>
