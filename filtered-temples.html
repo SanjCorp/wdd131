@@ -3,25 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Ricardo Sanjines">
-  <meta name="description" content="Photo album of temples built around the world by the Church of Jesus Christ of Latter-day Saints.">
-  <title>Temple Album</title>
-  <link rel="stylesheet" href="temples.css">
-  <script defer src="temples.js"></script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self'; style-src 'self';">
+  <meta name="description" content="Descripción breve de tu sitio.">
+  <title>Templos Filtrados</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
 </head>
-
 <body>
   <header>
     <h1>Templos del Mundo</h1>
-   <nav>
-  <a href="#" data-filter="all" onclick="filterTemples('all')">All</a>
-  <a href="#" data-filter="small" onclick="filterTemples('small')">Small</a>
-  <a href="#" data-filter="medium" onclick="filterTemples('medium')">Medium</a>
-  <a href="#" data-filter="large" onclick="filterTemples('large')">Large</a>
-</nav>
-
-<section id="temples"></section>
-
+    <nav>
+      <a href="#" onclick="filterTemples('small')">Pequeños</a>
+      <a href="#" onclick="filterTemples('medium')">Medianos</a>
+      <a href="#" onclick="filterTemples('large')">Grandes</a>
+      <a href="#" onclick="filterTemples('all')" class="active">Todos</a>
+    </nav>
   </header>
   <main>
     <section class="temples-grid" id="temples">
