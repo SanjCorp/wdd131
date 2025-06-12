@@ -1,5 +1,7 @@
-document.getElementById("menu").addEventListener("click", function () {
-  document.querySelector(".navigation").classList.toggle("show");
+document.addEventListener("DOMContentLoaded", () => {
+  const yearSpan = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  if (yearSpan) {
+    yearSpan.textContent = currentYear;
+  }
 });
-
-document.getElementById("lastModified").textContent = document.lastModified;
