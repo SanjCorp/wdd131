@@ -19,22 +19,29 @@ header h1 {
 }
 
 nav {
-  margin-top: 0.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  background-color: #004080;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
 }
 
-nav a:hover,
 nav a.active {
   background-color: #0066cc;
+  color: #fff;
+  font-weight: 700;
 }
 
 main {
@@ -45,4 +52,35 @@ main {
 
 .temples-grid {
   display: grid;
-  grid-template-columns
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+figure {
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+figcaption {
+  padding: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
