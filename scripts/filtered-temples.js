@@ -4,7 +4,7 @@ const temples = [
     location: "Salt Lake City, Utah, USA",
     dedicated: "1893-04-06",
     area: 253000,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/c0b097e48b46162d62e947823e6b23a603ca09c2/full/640%2C/0/default"
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/c0b097e48b46162d62e947823e6b23a603ca09c2/full/!320%2C224/0/default"
   },
   {
     name: "Rome Italy Temple",
@@ -60,14 +60,14 @@ const temples = [
     location: "Fortaleza, Brazil",
     dedicated: "2019-06-02",
     area: 36000,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/e2a28dbb2b14f5f71d79b359cf9f7b88dc480144/full/640%2C/0/default"
+    imageUrl: "https://churchofjesuschrist.org/imgs/e2a28dbb2b14f5f71d79b359cf9f7b88dc480144/full/640%2C/0/default"
   },
   {
     name: "Arequipa Peru Temple",
     location: "Arequipa, Peru",
     dedicated: "2019-12-15",
     area: 38990,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/55f6c59ce8f9c093a9c689067f8674335de544e2/full/640%2C/0/default"
+    imageUrl: "https://churchofjesuschrist.org/imgs/55f6c59ce8f9c093a9c689067f8674335de544e2/full/640%2C/0/default"
   }
 ];
 
@@ -99,7 +99,6 @@ const displayTemples = (filteredTemples) => {
 
 const filterTemples = (filter) => {
   let filtered = [];
-
   switch (filter) {
     case "small":
       filtered = temples.filter(t => t.area < 30000);
@@ -110,20 +109,37 @@ const filterTemples = (filter) => {
     case "large":
       filtered = temples.filter(t => t.area > 100000);
       break;
+    case "recent":
+      filtered = temples.filter(t => {
+        const year = new Date(t.dedicated).getFullYear();
+        return year >= 2010;
+      });
+      break;
+    case "all":
     default:
       filtered = temples;
       break;
   }
-
-  // Activar el link seleccionado
-  document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-  const current = document.querySelector(`nav a[data-filter="${filter}"]`);
-  if (current) current.classList.add("active");
-
   displayTemples(filtered);
 };
 
-// Mostrar todos al cargar
-window.addEventListener("load", () => {
+// Setup filtros en nav
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    // Quitar active de todos
+    navLinks.forEach(l => l.classList.remove("active"));
+    // Poner active al clickeado
+    link.classList.add("active");
+
+    // Filtrar
+    const filter = link.dataset.filter;
+    filterTemples(filter);
+  });
+});
+
+// Mostrar todos inicialmente
+window.addEventListener("DOMContentLoaded", () => {
   filterTemples("all");
 });
