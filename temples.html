@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A filtered photo album of temples around the world by dedication year and size.">
+  <meta name="description" content="A filtered photo album showcasing LDS temples around the world by dedication year and size.">
   <meta name="author" content="Ricardo Sanjines">
-  <title>Filtered Temple Album</title>
+  <title>Filtered Temple Album | Temples Around the World</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/filtered-temples.css">
   <link rel="stylesheet" href="styles/filtered-temples-large.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <h1>Temples Around the World</h1>
@@ -23,13 +28,23 @@
   </header>
 
   <main>
-    <div id="temples" class="temples-grid"></div>
+    <div id="temples" class="temples-grid">
+      <!-- Aquí se insertarán las tarjetas por JS -->
+    </div>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> | Ricardo Sanjines | WDD131 - BYU Idaho</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    // Actualiza el año automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Muestra la última fecha de modificación
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 
   <script src="scripts/filtered-temples.js"></script>
 </body>
