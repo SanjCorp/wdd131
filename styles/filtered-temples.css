@@ -29,7 +29,7 @@ nav {
   padding: 0.5rem 0;
 }
 
-/* Estilo base para enlaces */
+/* Enlaces */
 nav a {
   color: white;
   text-decoration: none;
@@ -38,26 +38,23 @@ nav a {
   border-radius: 4px;
   background-color: #004080;
   text-align: center;
-  user-select: none;
   cursor: pointer;
-  /* Sin :hover */
 }
 
-/* Enlace activo (seleccionado) */
 nav a.active {
   background-color: #0066cc;
   color: #fff;
   font-weight: 700;
 }
 
-/* Main contenido */
+/* Main */
 main {
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Grilla de templos con CSS Grid */
+/* Grid de templos */
 .temples-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -92,17 +89,4 @@ footer {
   padding: 0.75rem 1rem;
   font-size: 0.85rem;
   margin-top: 2rem;
-}
-
-/* Media Queries para mayor pantalla */
-@media (min-width: 768px) {
-  .temples-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .temples-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
