@@ -1,18 +1,11 @@
 @media (min-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .temples-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  #menu {
-    display: flex !important;
-    gap: 1rem;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+@media (min-width: 1024px) {
+  .temples-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
