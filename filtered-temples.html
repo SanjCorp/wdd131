@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self'; style-src 'self';">
-  <meta name="description" content="Photo album of temples built around the world by the Church of Jesus Christ of Latter-day Saints.">
   <meta name="author" content="Ricardo Sanjines">
-  <title>Filtered Temple Album</title>
-  <link rel="stylesheet" href="styles/filtered-temples.css">
-  <link rel="stylesheet" href="styles/filtered-temples-large.css">
-  <script src="scripts/filtered-temples.js" defer></script>
+  <meta name="description" content="Temple Album - Photo album of temples built around the world by the Church of Jesus Christ of Latter-day Saints.">
+  <title>Temple Album</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/temples.css">
+  <script defer src="scripts/temples.js"></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="temples.html">Temples</a>
-      <a href="filtered-temples.html">Filtered Temples</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
-      <a href="filtered-temples.html">reset</a>
+      <a href="#">Home</a>
+      <a href="#">Temples</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
     </nav>
   </header>
 
   <main>
-    <h1>Filtered Temple Album</h1>
-
-    <div class="filters">
-      <button id="all">All</button>
-      <button id="old">Before 1900</button>
-      <button id="modern">After 2000</button>
-    </div>
-
-    <div class="temple-cards" id="templeContainer">
-      <!-- Las tarjetas de templos se llenan con JavaScript -->
-    </div>
+    <h1>Temple Photo Album</h1>
+    <section class="gallery">
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 1">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <!-- Repite para 9 templos -->
+    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Ricardo Sanjines | Bolivia</p>
+    <p>&copy; <span id="year"></span> Ricardo Sanjines | Temple Album</p>
   </footer>
 </body>
 </html>
