@@ -85,7 +85,7 @@ const displayTemples = (filteredTemples) => {
     caption.innerHTML = `
       <strong>${temple.name}</strong><br>
       Location: ${temple.location}<br>
-      Dedicated: ${temple.dedicated}<br>
+      Dedicated: ${new Date(temple.dedicated).toLocaleDateString()}<br>
       Area: ${temple.area.toLocaleString()} sq ft
     `;
 
