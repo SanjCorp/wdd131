@@ -1,3 +1,18 @@
-.gallery {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menu {
+    display: flex !important;
+    gap: 1rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
 }
