@@ -18,6 +18,7 @@ header h1 {
   font-weight: 700;
 }
 
+/* Nav con CSS Grid en lugar de Flex */
 nav {
   display: grid;
   grid-auto-flow: column;
@@ -36,6 +37,7 @@ nav a {
   text-align: center;
   user-select: none;
   cursor: pointer;
+  /* Sin :hover */
 }
 
 nav a.active {
