@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,34 @@
   <link rel="stylesheet" href="styles/filtered-temples-large.css">
   <script src="scripts/filtered-temples.js" defer></script>
 </head>
-
 <body>
   <header>
-    <h1>Templos del Mundo</h1>
     <nav>
-      <a href="#" onclick="filterTemples('small')">Pequeños</a>
-      <a href="#" onclick="filterTemples('medium')">Medianos</a>
-      <a href="#" onclick="filterTemples('large')">Grandes</a>
-      <a href="#" onclick="filterTemples('all')" class="active">Todos</a>
+      <a href="index.html">Home</a>
+      <a href="temples.html">Temples</a>
+      <a href="filtered-temples.html">Filtered Temples</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="filtered-temples.html">reset</a>
     </nav>
   </header>
+
   <main>
-    <section class="temples-grid" id="temples">
-      <!-- Aquí se renderizan los templos -->
-    </section>
+    <h1>Filtered Temple Album</h1>
+
+    <div class="filters">
+      <button id="all">All</button>
+      <button id="old">Before 1900</button>
+      <button id="modern">After 2000</button>
+    </div>
+
+    <div class="temple-cards" id="templeContainer">
+      <!-- Las tarjetas de templos se llenan con JavaScript -->
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 Sanj Corporation</p>
+    <p>&copy; <span id="year"></span> Ricardo Sanjines | Bolivia</p>
   </footer>
 </body>
 </html>
