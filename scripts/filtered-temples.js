@@ -71,15 +71,11 @@ const temples = [
   }
 ];
 
-function displayTemples(filteredTemples) {
+const displayTemples = (filteredTemples) => {
   const container = document.getElementById("temples");
-  if (!container) return;
-
   container.innerHTML = "";
-
   filteredTemples.forEach((temple) => {
     const figure = document.createElement("figure");
-
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.name;
@@ -90,53 +86,42 @@ function displayTemples(filteredTemples) {
       <strong>${temple.name}</strong><br>
       Location: ${temple.location}<br>
       Dedicated: ${temple.dedicated}<br>
-      Area: ${temple.area.toLocaleString()} sq ft`;
+      Area: ${temple.area.toLocaleString()} sq ft
+    `;
 
     figure.appendChild(img);
     figure.appendChild(caption);
     container.appendChild(figure);
   });
-}
+};
 
-function filterTemples(filter) {
-  let result;
-
+const filterTemples = (filter) => {
   switch (filter) {
     case "old":
-      result = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+      displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900));
       break;
     case "new":
-      result = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+      displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000));
       break;
     case "large":
-      result = temples.filter(t => t.area > 90000);
+      displayTemples(temples.filter(t => t.area > 90000));
       break;
     case "small":
-      result = temples.filter(t => t.area < 10000);
+      displayTemples(temples.filter(t => t.area < 10000));
       break;
     default:
-      result = temples;
+      displayTemples(temples);
   }
+};
 
-  displayTemples(result);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Inicializar templos
-  displayTemples(temples);
-
-  // Filtros
-  document.querySelectorAll("nav a").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      filterTemples(e.target.id);
-    });
+document.querySelectorAll("nav a").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    filterTemples(btn.id);
   });
-
-  // Año actual y última modificación
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  const modEl = document.getElementById("lastModified");
-  if (modEl) modEl.textContent = document.lastModified;
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+window.onload = () => displayTemples(temples);
