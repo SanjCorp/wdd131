@@ -114,14 +114,18 @@ const filterTemples = (filter) => {
   }
 };
 
-document.querySelectorAll("nav a").forEach(btn => {
-  btn.addEventListener("click", (e) => {
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    filterTemples(btn.id);
+
+    document.querySelectorAll("nav a").forEach(l => l.classList.remove("active"));
+    e.target.classList.add("active");
+
+    const filter = e.target.id;
+    filterTemples(filter);
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
-
-window.onload = () => displayTemples(temples);
+window.addEventListener("DOMContentLoaded", () => {
+  displayTemples(temples);
+});
