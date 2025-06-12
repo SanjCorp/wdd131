@@ -109,37 +109,19 @@ const filterTemples = (filter) => {
     case "large":
       filtered = temples.filter(t => t.area > 100000);
       break;
-    case "recent":
-      filtered = temples.filter(t => {
-        const year = new Date(t.dedicated).getFullYear();
-        return year >= 2010;
-      });
-      break;
-    case "all":
     default:
       filtered = temples;
       break;
   }
+
+  // Actualiza el estado del nav
+  document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+  document.querySelector(`nav a[onclick="filterTemples('${filter}')"]`)?.classList.add("active");
+
   displayTemples(filtered);
 };
 
-// Setup filtros en nav
-const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    // Quitar active de todos
-    navLinks.forEach(l => l.classList.remove("active"));
-    // Poner active al clickeado
-    link.classList.add("active");
-
-    // Filtrar
-    const filter = link.dataset.filter;
-    filterTemples(filter);
-  });
-});
-
-// Mostrar todos inicialmente
-window.addEventListener("DOMContentLoaded", () => {
+// Mostrar todos al cargar
+window.addEventListener("load", () => {
   filterTemples("all");
 });
