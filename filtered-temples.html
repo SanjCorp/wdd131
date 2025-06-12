@@ -13,12 +13,15 @@
 <body>
   <header>
     <h1>Templos del Mundo</h1>
-    <nav>
-      <a href="#" onclick="filterTemples('small')">Pequeños</a>
-      <a href="#" onclick="filterTemples('medium')">Medianos</a>
-      <a href="#" onclick="filterTemples('large')">Grandes</a>
-      <a href="#" onclick="filterTemples('all')" class="active">Todos</a>
-    </nav>
+   <nav>
+  <a href="#" data-filter="all" onclick="filterTemples('all')">All</a>
+  <a href="#" data-filter="small" onclick="filterTemples('small')">Small</a>
+  <a href="#" data-filter="medium" onclick="filterTemples('medium')">Medium</a>
+  <a href="#" data-filter="large" onclick="filterTemples('large')">Large</a>
+</nav>
+
+<section id="temples"></section>
+
   </header>
   <main>
     <section class="temples-grid" id="temples">
