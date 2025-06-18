@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <script>
+    let count = localStorage.getItem("reviewCount") || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+  </script>
+</head>
+<body>
+  <h1>Thank you for your review!</h1>
+  <p>Total reviews submitted: <script>document.write(localStorage.getItem("reviewCount"));</script></p>
+</body>
+</html>
