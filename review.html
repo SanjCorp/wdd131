@@ -7,10 +7,34 @@
   <link rel="stylesheet" href="styles/form.css" />
   <script>
     window.onload = function() {
+      // Contador de reseñas
       let count = localStorage.getItem("reviewCount") || 0;
       count++;
       localStorage.setItem("reviewCount", count);
       document.getElementById("counter").textContent = count;
+
+      // Obtener parámetros URL
+      const params = new URLSearchParams(window.location.search);
+
+      const product = params.get('product') || 'No especificado';
+      const rating = params.get('rating') || 'No calificado';
+      const installDate = params.get('installDate') || 'No indicado';
+      const username = params.get('username') || 'Anónimo';
+      const reviewText = params.get('review') || 'Sin comentario';
+      const features = params.getAll('features[]') || [];
+
+      // Crear resumen
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <h2>Detalles de tu reseña:</h2>
+        <p><strong>Producto:</strong> ${product}</p>
+        <p><strong>Calificación:</strong> ${rating} estrella(s)</p>
+        <p><strong>Fecha de Instalación:</strong> ${installDate}</p>
+        <p><strong>Características útiles:</strong> ${features.length > 0 ? features.join(', ') : 'Ninguna'}</p>
+        <p><strong>Comentario:</strong> ${reviewText}</p>
+        <p><strong>Nombre:</strong> ${username}</p>
+      `;
+      document.body.appendChild(div);
     }
   </script>
 </head>
