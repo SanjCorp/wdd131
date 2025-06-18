@@ -1,15 +1,15 @@
-const productArray = [
-  { id: "product1", name: "SuperWidget" },
-  { id: "product2", name: "MegaWidget" },
-  { id: "product3", name: "UltraWidget" },
+const products = [
+  { id: "f001", name: "Flexible Tripod" },
+  { id: "f002", name: "Camera Lens" },
+  { id: "f003", name: "LED Light Panel" },
+  { id: "f004", name: "Microphone" }
 ];
 
-window.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("productName");
-  productArray.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    select.appendChild(option);
-  });
+const selectElement = document.querySelector("#productName");
+
+products.forEach(product => {
+  const option = document.createElement("option");
+  option.value = product.id;
+  option.textContent = product.name;
+  selectElement.appendChild(option);
 });
