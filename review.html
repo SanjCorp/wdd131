@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Review Confirmation</title>
+  <title>Thank You</title>
+  <link rel="stylesheet" href="styles/form.css" />
   <script>
-    let count = localStorage.getItem("reviewCount") || 0;
-    count++;
-    localStorage.setItem("reviewCount", count);
+    window.onload = function() {
+      let count = localStorage.getItem("reviewCount") || 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+      document.getElementById("counter").textContent = count;
+    }
   </script>
 </head>
 <body>
-  <h1>Thank you for your review!</h1>
-  <p>Total reviews submitted: <script>document.write(localStorage.getItem("reviewCount"));</script></p>
+  <main>
+    <h1>Thank you for your review!</h1>
+    <p>This is review number <span id="counter">0</span>.</p>
+  </main>
 </body>
 </html>
