@@ -1,21 +1,35 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 1rem;
-  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
 }
-form {
+
+header {
+  background-color: #3b003b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
   max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: auto;
+  background-color: #e2dce6;
+  border-radius: 10px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 label, legend {
-  display: block;
   margin-top: 1rem;
   font-weight: bold;
 }
+
 input[type="text"],
 input[type="date"],
 select,
@@ -23,20 +37,29 @@ textarea {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
-}
-input[type="submit"] {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  cursor: pointer;
 }
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
+
 fieldset {
   border: none;
-  margin-top: 1rem;
+  padding: 0;
+}
+
+input[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: #3b003b;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
 }
