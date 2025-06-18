@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Product review form page for user feedback.">
-  <meta name="author" content="Ricardo Sanjines">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Review</title>
-  <link rel="stylesheet" href="styles/form.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="description" content="Product review form page for user feedback." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald:wght@600&display=swap" rel="stylesheet" />
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Product Review</h1>
+    <h1>🌟 Product Review 🌟</h1>
   </header>
+
   <main>
     <form method="get" action="review.html">
       <label for="productName">Product Name</label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Choose a Product ...</option>
-        <!-- Options serán insertadas por JavaScript -->
       </select>
 
       <fieldset>
         <legend>Overall Rating</legend>
-        <label><input type="radio" id="rate1" name="rating" value="1" required> ★</label>
-        <label><input type="radio" id="rate2" name="rating" value="2"> ★★</label>
-        <label><input type="radio" id="rate3" name="rating" value="3"> ★★★</label>
-        <label><input type="radio" id="rate4" name="rating" value="4"> ★★★★</label>
-        <label><input type="radio" id="rate5" name="rating" value="5"> ★★★★★</label>
+        <div class="stars">
+          <label><input type="radio" name="rating" value="1" required> ★</label>
+          <label><input type="radio" name="rating" value="2"> ★★</label>
+          <label><input type="radio" name="rating" value="3"> ★★★</label>
+          <label><input type="radio" name="rating" value="4"> ★★★★</label>
+          <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+        </div>
       </fieldset>
 
       <label for="installDate">Date of Installation</label>
-      <input type="date" id="installDate" name="installDate" required>
+      <input type="date" id="installDate" name="installDate" required />
 
       <fieldset>
-        <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
-        <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
-        <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
-        <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
-        <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+        <legend>Useful Features <em>(Check all that apply)</em></legend>
+        <label><input type="checkbox" id="durability" name="features" value="Durability" /> Durability</label>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use" /> Ease of Use</label>
+        <label><input type="checkbox" id="performance" name="features" value="Performance" /> Performance</label>
+        <label><input type="checkbox" id="design" name="features" value="Design" /> Design</label>
       </fieldset>
 
       <label for="review">Written Review <span>(Optional)</span></label>
-      <textarea id="review" name="review" rows="5"></textarea>
+      <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
 
       <label for="username">Your Name <span>(Optional)</span></label>
-      <input type="text" id="username" name="username">
+      <input type="text" id="username" name="username" placeholder="Your name" />
 
-      <input type="submit" value="Submit">
+      <input type="submit" value="✨ Post Review ✨" />
     </form>
   </main>
 
   <footer>
     <p>©2024 🌸 Ricardo Sanjines 🌸 Bolivia</p>
-    <p>Last Modification: <span id="lastModified"></span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
   <script>
