@@ -1,23 +1,28 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f7f0ff, #e0c3fc);
   margin: 0;
   padding: 0;
-  background-color: #f3f3f3;
+  color: #333;
 }
 
 header {
-  background-color: #3b003b;
+  background-color: #4a0072;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main {
-  padding: 1rem;
   max-width: 600px;
-  margin: auto;
-  background-color: #e2dce6;
-  border-radius: 10px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 form {
@@ -26,40 +31,66 @@ form {
 }
 
 label, legend {
-  margin-top: 1rem;
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 input[type="text"],
 input[type="date"],
 select,
 textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #8e24aa;
+  outline: none;
 }
 
 fieldset {
   border: none;
+  margin-top: 1rem;
   padding: 0;
+}
+
+.stars label {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 input[type="submit"] {
   margin-top: 1.5rem;
-  padding: 0.75rem;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  color: #fff;
+  background-color: #8e24aa;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #6a1b9a;
 }
 
 footer {
   text-align: center;
-  background-color: #3b003b;
+  background-color: #4a0072;
   color: white;
   padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.9rem;
 }
