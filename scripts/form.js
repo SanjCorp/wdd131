@@ -1,15 +1,16 @@
 const products = [
-  { id: "f001", name: "Flexible Tripod" },
-  { id: "f002", name: "Camera Lens" },
-  { id: "f003", name: "LED Light Panel" },
-  { id: "f004", name: "Microphone" }
+  { id: "prod001", name: "Smartphone X" },
+  { id: "prod002", name: "Tablet Pro" },
+  { id: "prod003", name: "Smartwatch Elite" },
+  { id: "prod004", name: "Laptop Z" }
 ];
 
-const selectElement = document.querySelector("#productName");
-
-products.forEach(product => {
-  const option = document.createElement("option");
-  option.value = product.id;
-  option.textContent = product.name;
-  selectElement.appendChild(option);
+document.addEventListener("DOMContentLoaded", () => {
+  const selectElement = document.getElementById("product");
+  products.forEach(product => {
+    const option = document.createElement("option");
+    option.value = product.id;
+    option.textContent = product.name;
+    selectElement.appendChild(option);
+  });
 });
